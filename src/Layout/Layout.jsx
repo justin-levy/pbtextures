@@ -1,7 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-// import { Row, Col } from "react-bootstrap";
 import Navbar from "../Components/Navbar";
 
 const Layout = () => {

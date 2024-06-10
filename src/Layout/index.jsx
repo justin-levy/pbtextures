@@ -1,6 +1,13 @@
 import { Col, Container, Row } from "react-bootstrap";
+import ImageHoverComponent from "../Components/ImageHoverComponent";
+import Footer from "../Components/Footer";
 
 const Home = () => {
+  const scrollToContent = () => {
+    const contentSection = document.getElementById('content-section');
+    contentSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return <Container>
     <Row>
       <Col sm={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -8,7 +15,7 @@ const Home = () => {
           height: '100vh',
           objectFit: 'cover',
           width: '100%'
-        }} />
+        }} alt="Artist" />
       </Col>
       <Col sm={6} style={{
         display: 'flex', flexDirection: 'column',
@@ -22,54 +29,26 @@ const Home = () => {
         </h3>
       </Col>
     </Row>
+    <button className="down-arrow" onClick={scrollToContent}>
+      ↓
+    </button>
+    <div id="content-section" style={{ padding: '100px 20px', textAlign: 'center' }}>
+      <h2>Check out some of my latest pieces!</h2>
+      <p>Here is the content below the initial section.</p>
+    </div>
     <Row style={{ margin: '32px 64px', gap: '32px' }}>
-      <Col sm={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <img src="art/art1.jpg" style={{
-          height: '50vh',
-          objectFit: 'cover',
-          width: '100%'
-        }} />
-      </Col>
-      <Col>
-        <img src="art/art2.jpg" style={{
-          height: '50vh',
-          objectFit: 'cover',
-          width: '100%'
-        }} />
-      </Col>
+      <ImageHoverComponent img={'art/art1.jpg'} title='Test' />
+      <ImageHoverComponent img={'art/art2.jpg'} title='Cross' />
     </Row>
     <Row style={{ margin: '32px 64px', gap: '32px' }}>
-      <Col sm={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <img src="art/art1.jpg" style={{
-          height: '60vh',
-          objectFit: 'cover',
-          width: '100%'
-        }} />
-      </Col>
-      <Col>
-        <img src="art/art2.jpg" style={{
-          height: '60vh',
-          objectFit: 'cover',
-          width: '100%'
-        }} />
-      </Col>
+      <ImageHoverComponent img={'art/art1.jpg'} title='Test' />
+      <ImageHoverComponent img={'art/art2.jpg'} title='Cross' />
     </Row>
-    <Row style={{ margin: '32px 64px', gap: '32px' }}>
-      <Col sm={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <img src="art/art1.jpg" style={{
-          height: '60vh',
-          objectFit: 'cover',
-          width: '100%'
-        }} />
-      </Col>
-      <Col>
-        <img src="art/art2.jpg" style={{
-          height: '60vh',
-          objectFit: 'cover',
-          width: '100%'
-        }} />
-      </Col>
-    </Row>
+    {/* <Row style={{ margin: '32px 64px', gap: '32px' }}>
+      <ImageHoverComponent img={'art/art1.jpg'} title='Test' />
+      <ImageHoverComponent img={'art/art2.jpg'} title='Cross' />
+    </Row> */}
+    <Footer />
   </Container>;
 };
 

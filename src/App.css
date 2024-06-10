@@ -142,3 +142,22 @@ h3 {
     0 8px 8px 8px hsl(0deg 0% 0% / 0.075),
     0 16px 16px 16px hsl(0deg 0% 0% / 0.075) !important;
 }
+
+
+
+.down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% + 24px);
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.down-arrow:hover {
+  color: #555;
+}

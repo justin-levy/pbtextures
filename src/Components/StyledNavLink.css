@@ -1,0 +1,24 @@
+.styled-nav-link {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.5s ease;
+}
+
+.styled-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: black;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+.styled-nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
