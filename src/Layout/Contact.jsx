@@ -22,7 +22,8 @@ const Contact = () => {
       </Col>
       <Col sm={6} style={{
         display: 'flex', flexDirection: 'column',
-        height: '100vh', justifyContent: 'center', alignItems: 'center', textAlign: 'center'
+        height: '100vh', justifyContent: 'center', alignItems: 'center', textAlign: 'center',
+        padding: '10%',
       }}>
         <Row>
           <h3 style={{ marginBottom: '20px' }}>
