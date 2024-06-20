@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 .container {
   margin: 0px;
   padding: 0px;
@@ -63,6 +67,18 @@ h3 {
 .nav-link:hover {
   color: grey;
   /* text-decoration: underline; */
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.mobile-hidden {
+  font-weight: 600;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
 
 /* .row {

@@ -1,31 +1,35 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa'; // Import your desired icons
+import { FaInstagram, FaFacebook, FaTiktok, FaEtsy } from 'react-icons/fa'; // Import your desired icons
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white mt-5 p-4 text-center">
+        <footer className="mt-5 p-4 text-center" style={{ backgroundImage: 'footer.jpg' }}>
             <Container>
                 <Row>
                     <Col md={4} className="mb-3 mb-md-0">
                         <h5>Follow Us</h5>
-                        <a href="https://instagram.com" className="text-white m-2" aria-label="Instagram">
+                        <a href="https://instagram.com/pbtextures" className="m-2" aria-label="Instagram">
                             <FaInstagram size={30} />
                         </a>
-                        <a href="https://facebook.com" className="text-white m-2" aria-label="Facebook">
+                        {/* <a href="https://facebook.com/pbtextures" className="m-2" aria-label="Facebook">
                             <FaFacebook size={30} />
+                        </a> */}
+                        <a href="https://www.tiktok.com/@pbtextures" className="m-2" aria-label="Tiktok">
+                            <FaTiktok size={29} />
                         </a>
-                        <a href="https://twitter.com" className="text-white m-2" aria-label="Twitter">
-                            <FaTwitter size={30} />
+                        <a href="https://www.etsy.com/shop/PBStudiotextures" className="m-2" aria-label="Etsy">
+                            <FaEtsy size={30} />
                         </a>
                     </Col>
                     <Col md={4} className="mb-3 mb-md-0">
                         <h5>Contact Us</h5>
-                        <p>email@example.com</p>
+                        <Link style={{ color: 'black' }} to='mailto:pball723@yahoo.com'>pball723@yahoo.com</Link>
                     </Col>
                     <Col md={4}>
-                        <h5>&copy; {new Date().getFullYear()} PB Textures</h5>
+                        <h5><span style={{ fontSize: '1rem' }}>&copy; {new Date().getFullYear()}</span> <span style={{ fontSize: '1.2rem' }}>PB Textures</span></h5>
                     </Col>
                 </Row>
             </Container>

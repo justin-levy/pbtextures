@@ -1,6 +1,7 @@
 {
   "name": "pbtextures",
   "version": "0.1.0",
+  "homepage": "https://pbtextures.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -14,6 +15,7 @@
     "react-masonry-css": "^1.0.16",
     "react-router-dom": "^6.23.0",
     "react-scripts": "^5.0.1",
+    "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

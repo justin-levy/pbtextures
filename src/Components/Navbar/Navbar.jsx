@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Nav } from 'react-bootstrap';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import StyledNavLink from '../Components/StyledNavLink';
+import StyledNavLink from './StyledNavLink';
 import './Navbar.css';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(window.scrollY > 50);
   const [sidePanelOpen, setSidePanelOpen] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(
+    () => { setSidePanelOpen(false) },
+    [location]
+  )
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -42,7 +50,10 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
-        <h1>PB Textures</h1>
+        <h1><Link to="/" style={{
+          textDecoration: 'none',
+          color: 'black'
+        }}>PB Textures</Link></h1>
         <div className="hamburger" onClick={toggleSidePanel}>
           <FaBars />
         </div>

@@ -1,17 +1,20 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import './ImageHoverComponent.css'; // Ensure you import the CSS file
+import { Link } from 'react-router-dom';
 
 const ImageHoverComponent = ({
     img,
-    title
+    title,
 }) => {
     return (
-        <Col className="image-container">
+        <Col className="image-container" md='6'>
             <img src={img} alt="Art" />
-            <div className="overlay">
+            <Link className='overlay' to={`/portfolio#${title}`} style={{
+                textDecoration: 'none'
+            }}>
                 <div className="overlay-text">{title}</div>
-            </div>
+            </Link>
         </Col>
     );
 };

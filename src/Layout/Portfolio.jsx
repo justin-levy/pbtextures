@@ -1,43 +1,61 @@
-import React from 'react';
-import Masonry from 'react-masonry-css';
-import { Card } from 'react-bootstrap';
+import React, { useEffect } from 'react';
+import { Collections } from '../Collections'
 import './Gallery.css'; // Import the CSS file for animations and styling
-
-const artworks = [
-  { id: 1, title: 'Artwork 1', description: 'Description 1', imageUrl: 'art/art1.jpg' },
-  { id: 2, title: 'Artwork 2', description: 'Description 2', imageUrl: 'art/art1.jpg' },
-  { id: 3, title: 'Artwork 3', description: 'Description 3', imageUrl: 'art/art1.jpg' },
-  { id: 4, title: 'Artwork 4', description: 'Description 4', imageUrl: 'art/art1.jpg' },
-  { id: 5, title: 'Artwork 5', description: 'Description 5', imageUrl: 'art/art1.jpg' },
-  { id: 6, title: 'Artwork 6', description: 'Description 6', imageUrl: 'art/art1.jpg' },
-];
+import { althea, artemis, athena, calliope, dream, jesmonite, sculptures } from '../Collections/artworks';
+import { useLocation } from 'react-router-dom';
 
 const Portfolio = () => {
-  const breakpointColumnsObj = {
-    default: 2,
-    1100: 2,
-    700: 1
+
+  const location = useLocation();
+  const hashFragment = location.hash.substring(1);
+
+  const anchorScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
+  useEffect(() => {
+    console.log(hashFragment);
+    if (!hashFragment) {
+      return;
+    }
+    setTimeout(function () {
+      anchorScroll(hashFragment);
+    }, 100);
+  }, [hashFragment])
+
   return (
-    <div className="gallery-container">
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {artworks.map(artwork => (
-          <Card key={artwork.id} className="art-card">
-            <div className="image-container">
-              <Card.Img variant="top" src={artwork.imageUrl} alt={artwork.title} />
-              <div className="overlay">
-                <Card.Title className="overlay-title">{artwork.title}</Card.Title>
-                <Card.Text className="overlay-description">{artwork.description}</Card.Text>
-              </div>
-            </div>
-          </Card>
-        ))}
-      </Masonry>
+    <div className="gallery-container bg-white">
+      <div id='althea'>
+        <h1>Althea</h1>
+        <Collections artworks={althea} />
+      </div>
+      <div id='artemis'>
+        <h1>Artemis</h1>
+        <Collections artworks={artemis} />
+      </div>
+      <div id='athena'>
+        <h1>Athena</h1>
+        <Collections artworks={athena} />
+      </div>
+      <div id='calliope'>
+        <h1>Calliope</h1>
+        <Collections artworks={calliope} />
+      </div>
+      <div id='dream'>
+        <h1>Dream</h1>
+        <Collections artworks={dream} />
+      </div>
+      <div id='jesmonite'>
+        <h1>Jesmonite</h1>
+        <Collections artworks={jesmonite} />
+      </div>
+      <div id='sculptures'>
+        <h1>Sculptures</h1>
+        <Collections artworks={sculptures} />
+      </div>
     </div>
   );
 };

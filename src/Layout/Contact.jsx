@@ -1,11 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { BsFacebook, BsInstagram } from "react-icons/bs";
-import { CgFacebook, CgInstagram } from "react-icons/cg";
-import { CiInstagram } from "react-icons/ci";
-import { FaFacebook, FaInstagram, FaInstagramSquare } from "react-icons/fa";
-import { ImInstagram } from "react-icons/im";
+import { BsInstagram, BsTiktok } from "react-icons/bs";
+import { CgFacebook } from "react-icons/cg";
+import { FaEtsy } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Footer from "../Components/Footer";
 
 const Contact = () => {
   return <Container style={{
@@ -27,29 +24,38 @@ const Contact = () => {
       }}>
         <Row>
           <h3 style={{ marginBottom: '20px' }}>
-            Find me on Instagram and Facebook, or reach out to me over email!
+            Find me on Instagram and Tiktok, check out my Etsy Storefront, or reach out to me over email!
           </h3>
         </Row>
-        <Row style={{ width: '100%', justifyContent: 'center' }}>
+        <Row style={{ width: '100%', justifyContent: 'space-around' }}>
           <Col xs={4} md={2} className="d-flex justify-content-center">
-            <a href="https://instagram.com" aria-label="Instagram" style={{ color: 'inherit' }}>
+            <a href="https://instagram.com/pbtextures" aria-label="Instagram" style={{ color: 'inherit' }}>
               <BsInstagram size={'48px'} />
             </a>
           </Col>
-          <Col xs={4} md={2} className="d-flex justify-content-center">
+          {/* <Col xs={4} md={2} className="d-flex justify-content-center">
             <a href="https://facebook.com" aria-label="Facebook" style={{ color: 'inherit' }}>
               <CgFacebook size={'48px'} />
             </a>
+          </Col> */}
+          <Col xs={4} md={2} className="d-flex justify-content-center">
+            <a href="https://www.tiktok.com/@pbtextures" aria-label="Tiktok" style={{ color: 'inherit' }}>
+              <BsTiktok size={'48px'} />
+            </a>
           </Col>
           <Col xs={4} md={2} className="d-flex justify-content-center">
-            <a href="mailto:example@example.com" aria-label="Email" style={{ color: 'inherit' }}>
+            <a href="https://www.etsy.com/shop/PBStudiotextures" aria-label="Etsy" style={{ color: 'inherit' }}>
+              <FaEtsy size={'48px'} />
+            </a>
+          </Col>
+          <Col xs={4} md={2} className="d-flex justify-content-center">
+            <a href="mailto:pball723@yahoo.com" aria-label="Email" style={{ color: 'inherit' }}>
               <MdEmail size={'48px'} />
             </a>
           </Col>
         </Row>
       </Col>
     </Row>
-    <Footer />
   </Container>;
 };
 

@@ -1,5 +1,11 @@
 .gallery-container {
     padding: 20px;
+    padding-top: 100px;
+    background-color: #EFEAE3;
+}
+
+.gallery-container div {
+    scroll-margin-top: 80px;
 }
 
 .my-masonry-grid {
@@ -23,8 +29,8 @@
 .image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    height: 500px;
+    /* border-radius: 10px; */
+    /* height: 500px; */
     /* Increase the height for larger artwork pieces */
 }
 
@@ -48,4 +54,55 @@
 .overlay-description {
     display: none;
     /* Remove the overlay description completely */
+}
+
+.zoomable-img {
+    cursor: zoom-in;
+    max-height: 80vh;
+    max-width: 90vw;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.zoomed {
+    cursor: zoom-out;
+    transform-origin: center center;
+    max-width: none;
+    /* Allows the image to expand beyond its original size */
+    max-height: none;
+    /* Allows the image to expand beyond its original size */
+}
+
+.modal-fullscreen {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    max-height: 80vh;
+    padding: 0;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
 }

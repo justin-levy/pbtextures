@@ -1,8 +1,9 @@
 footer {
-    background-color: #1A3B48;
-    /* Complementary dark color */
-    color: #F3EBDE;
-    /* Text color for better contrast */
+    background-image: url('../../../public/footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-weight: 600;
 }
 
 footer a {
@@ -11,13 +12,15 @@ footer a {
 }
 
 footer a:hover {
-    color: #aaa;
+    color: black;
 }
 
 footer h5 {
+    font-family: 'Oswald';
     font-size: 1.6rem;
+    font-weight: 400;
     letter-spacing: 2px;
-    color: #F3EBDE;
+    color: black;
     /* Increase the size of h5 texts */
     margin-bottom: 1rem;
 }
