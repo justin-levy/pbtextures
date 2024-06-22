@@ -3,6 +3,7 @@ import { BsInstagram, BsTiktok } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
 import { FaEtsy } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { env } from "../env";
 
 const Contact = () => {
   return <Container style={{
@@ -49,7 +50,7 @@ const Contact = () => {
             </a>
           </Col>
           <Col xs={4} md={2} className="d-flex justify-content-center">
-            <a href="mailto:pball723@yahoo.com" aria-label="Email" style={{ color: 'inherit' }}>
+            <a href={`mailto:${env.EMAIL}`} aria-label="Email" style={{ color: 'inherit' }}>
               <MdEmail size={'48px'} />
             </a>
           </Col>

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FaInstagram, FaFacebook, FaTiktok, FaEtsy } from 'react-icons/fa'; // Import your desired icons
 import './footer.css';
 import { Link } from 'react-router-dom';
+import { env } from '../../env'
 
 const Footer = () => {
     return (
@@ -26,7 +27,7 @@ const Footer = () => {
                     </Col>
                     <Col md={4} className="mb-3 mb-md-0">
                         <h5>Contact Us</h5>
-                        <Link style={{ color: 'black' }} to='mailto:pball723@yahoo.com'>pball723@yahoo.com</Link>
+                        <Link style={{ color: 'black' }} to={`mailto:${env.EMAIL}`}>{env.EMAIL}</Link>
                     </Col>
                     <Col md={4}>
                         <h5><span style={{ fontSize: '1rem' }}>&copy; {new Date().getFullYear()}</span> <span style={{ fontSize: '1.2rem' }}>PB Textures</span></h5>
