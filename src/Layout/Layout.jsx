@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer"
+import { COLORS } from "../colors";
 
 const Layout = () => {
   function ScrollToTop() {
@@ -22,7 +23,7 @@ const Layout = () => {
   return (
     <div style={{
       // backgroundColor: '#F3EBDE',
-      backgroundColor: '#EFEAE3',
+      backgroundColor: COLORS.beige,
       height: '100vh'
     }}>
       <Container>

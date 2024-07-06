@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Collections } from '../Collections'
-import './Gallery.css'; // Import the CSS file for animations and styling
-import { althea, artemis, athena, calliope, dream, jesmonite, sculptures } from '../Collections/artworks';
 import { useLocation } from 'react-router-dom';
+
+import { Collections } from '../Collections'
+import './Portfolio.scss';
+import { althea, artemis, athena, calliope, dream, jesmonite, sculptures } from '../Collections/artworks';
 
 const Portfolio = () => {
 

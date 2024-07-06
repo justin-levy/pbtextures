@@ -1,5 +1,7 @@
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ImageHoverComponent from "../Components/ImageHoverComponent";
+import { COLORS } from "../colors";
 
 const Home = () => {
   const scrollToContent = () => {
@@ -21,7 +23,7 @@ const Home = () => {
         height: '100vh', justifyContent: 'center', alignItems: 'center',
         padding: '10%',
         textAlign: 'center',
-        backgroundColor: '#EFEAE3'
+        backgroundColor: COLORS.beige
       }}>
         <h2 style={{ fontWeight: 'bolder' }}>
           Check out all of my collections below, along with my latest collection: Jesmonite!
